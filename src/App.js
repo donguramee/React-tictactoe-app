@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Board from "./component/Board";
 
@@ -45,7 +46,7 @@ function App() {
     }
     newSquares[i] = xIsNext ? "X" : "O";
     setHistory([...history, { squares: newSquares }]);
-    setXIsNext((current) => !current);
+    setXIsNext((prev) => !prev);
   };
   /* html */
   return (
